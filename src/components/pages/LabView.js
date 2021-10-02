@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, {Component, useState, useEffect} from 'react';
+//import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -55,7 +56,11 @@ export default class LabView extends Component {
   render() {
     return (
       <div className="LabView">
-        <h3 className="viewlabTital">Lab Details</h3><br/><br/>
+        <br/><td/><tr/>
+        <div id="searchbtn">
+          <button  className="searchLabBtn"><Link className="toSearchPage" to="/searchLab" >Search Lab</Link></button></div>
+          <h3 className="viewlabTital">Lab Details</h3><br/><br/>
+        
         <table className="table" className="container">
           <thead className="thead-light">
             <tr>

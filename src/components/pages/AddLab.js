@@ -137,6 +137,7 @@ export default class AddLab extends Component {
                             value={this.state.mobilenumber}
                             pattern="[0-9]*"
                             maxLength="10"
+                            minLength="10"
                             placeholder="Enter Mobile Number"
                             onChange={this.onChangeMobilenumber}
                         />

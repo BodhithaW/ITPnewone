@@ -11,6 +11,7 @@ router.route('/').get((req, res) => {
 
 //create
 router.route('/add').post((req, res) => {
+    const testdate = Date.parse(req.body.testdate);
     const name = req.body.name;
     const urineTest= req.body.urineTest;
     const Fullbloodcount= req.body.Fullbloodcount;
@@ -23,6 +24,7 @@ router.route('/add').post((req, res) => {
 
     const newCost = new Cost({
 
+        testdate,
         name,
         urineTest,
         Fullbloodcount,
@@ -59,6 +61,7 @@ router.route('/update/:id').post((req, res) => {
     Cost.findById(req.params.id)
         .then(cost => {
         
+        cost.testdate = Date.parse(req.body.testdate);
         cost.name = req.body.name;
         cost.urineTest= req.body.urineTest;
         cost.Fullbloodcount=req.body.Fullbloodcount;

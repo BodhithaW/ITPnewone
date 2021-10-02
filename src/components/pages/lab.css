@@ -36,6 +36,20 @@
   
 }
 
+.searchLabBtn{
+	align-items: left;
+	border-radius: 8px;
+	background-color:rgb(164, 159, 231);
+	height: 40px;
+	width:200px;
+	transition-duration: 0.4s;
+}
+
+.searchLabBtn:hover {
+	background-color: rgb(87, 123, 221);
+}
+
+
 .labform{
     width: 60%;
     padding: 10px;
@@ -186,6 +200,12 @@ th {
     color: #d72323;
 }
 
+#searchbtn{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+
 .addlabTitle{
     color: #303a52;
     font-weight: bold;
@@ -203,4 +223,116 @@ th {
     font-size: 3rem;
     display: flex;
     height: 10vh;
+}
+
+.searchLabPage{
+	background: url("https://encycloblog.com/wp-content/uploads/2020/11/research-have-been-made.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position-y: 0px;
+
+}
+
+#searchLabForm{
+	max-width: 1000px;
+	height:800px;
+	padding: 20px;
+	background-color: transparent;
+    background: rgba(36, 105, 194, 0.5);
+}
+
+.searchLabTitle{
+	font-size: 50px;
+	text-align: center;
+	color: rgb(22, 57, 173);
+	margin: 0;
+	height: 60px;
+}
+
+#searchLabcostForm{
+	max-width: 1000px;
+	height:800px;
+	padding: 20px;
+	background-color: transparent;
+    background: rgba(74, 117, 209, 0.473);
+}
+
+.searchLabcostPage{
+    background: url("https://encycloblog.com/wp-content/uploads/2020/11/research-have-been-made.jpg") no-repeat center center fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#btnlabcost{
+    background-color:#e41649;
+    border: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 50px;
+    width: 700px;
+}
+
+.viewAlllabcostBtn{
+	margin: 20px;
+	border-radius: 8px;
+	background-color:rgb(146, 186, 238);
+	height: 40px;
+	width:240px;
+	
+    margin-right: 10px;
+}
+
+.searchcalcostBtn{
+    
+	border-radius: 8px;
+	background-color:rgb(146, 186, 238);
+	height: 40px;
+	width:240px;
+	transition-duration: 0.4s;
+    margin-right: 30px;
+}
+
+.linkToviewcalCost{
+	color: maroon;
+	margin: 20px;;
+	font-weight: bold;
+	width: 200px;
+    margin-right: 20px;
+}
+
+.linkToViewCost{
+    color: maroon;
+	margin: 20px;;
+	font-weight: bold;
+	width: 200px;
+    margin-right: 20px;
+}
+
+
+
+#reporttbtn{
+    
+	border-radius: 8px;
+	background-color:rgb(146, 186, 238);
+	height: 40px;
+	width:240px;
+	transition-duration: 0.4s;
+    margin-right: 30px;
+}
+
+.labcostReportPage{
+    background: url("https://us.123rf.com/450wm/madamlead/madamlead1712/madamlead171200021/91653629-experiment-water-in-beaker-and-flask-in-blue-chemistry-science-laboratory-background.jpg?ver=6") no-repeat center center fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tab{
+    color: violet;
 }

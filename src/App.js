@@ -43,6 +43,9 @@ import LabView from "./components/pages/LabView";
 import manageLab from "./components/LabService/manageLab";
 import calCost from "./components/pages/calCost";
 import viewcalCost from "./components/pages/viewcalCost";
+import SearchLab from './components/pages/searchLab';
+import SearchLabcost from './components/pages/searchLabcost';
+import labcostReport from './components/pages/labcostReport';
 
 //Naveen
 import ManagePharmacy from './components/PharmacyServices/managePharmacy';
@@ -123,6 +126,9 @@ function App() {
               <Route path="/manageLab" component={manageLab} />
               <Route path="/calCost" component={calCost} />
               <Route path="/viewcalCost" component={viewcalCost} />
+              <Route path='/searchLab' component={SearchLab} />
+              <Route path='/searchLabcost' component={SearchLabcost} />
+              <Route path='/labcostReport' component={labcostReport} />
 
               <Route path='/managePharmacy' component={ManagePharmacy} />
               <Route path="/create" component={AddMadicine} />

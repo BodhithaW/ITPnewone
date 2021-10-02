@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { Component, useState } from 'react';
-import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from 'react-datepicker';
+import { Link, Redirect } from "react-router-dom";
+//import {useReactToPrint} from "react-to-Print";
 import './lab.css';
 
 
@@ -8,6 +10,7 @@ export default class calCost extends Component {
   constructor(props) {
     super(props);
 
+    this.onChangeTestdate = this.onChangeTestdate.bind(this);
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeUrineTest = this.onChangeUrineTest.bind(this);
     this.onChangeFullbloodcount = this.onChangeFullbloodcount.bind(this);
@@ -21,6 +24,7 @@ export default class calCost extends Component {
 
 
     this.state = {
+      testdate: new Date(),
       name: '',
       urineTest: '',
       Fullbloodcount: '',
@@ -36,6 +40,12 @@ export default class calCost extends Component {
 
 
 
+
+  onChangeTestdate(date) {
+    this.setState({
+        testdate: date
+    });
+}
 
   onChangeName(e) {
     this.setState({
@@ -98,6 +108,7 @@ export default class calCost extends Component {
     e.preventDefault();
 
     const cost = {
+      testdate: this.state.testdate,
       name: this.state.name,
       urineTest: this.state.urineTest,
       Fullbloodcount: this.state.Fullbloodcount,
@@ -121,9 +132,24 @@ export default class calCost extends Component {
 
   render() {
     return (
-      <div className="calCost">
+      <div className="calCost">                                                                                                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+        <button className="viewAlllabcostBtn"><Link className="linkToviewcalCost" to="/viewcalCost">View All Lab Cost Details</Link></button>
+       <button className="searchcalcostBtn"><Link className="linkToViewCost" to="/searchLabcost">Search Cost Details</Link></button>
         <h3 className="addlabTitle">PATIENT LAB REPORT CHARGE CALCULATION</h3><br/>
         <form onSubmit={this.onSubmit}>
+
+          <div className="form-labgroup3">
+              <label><b>Test Date: </b></label>
+              <div>
+                <DatePicker
+              selected={this.state.testdate}
+              onChange={this.onChangeTestdate}
+                />
+          </div>
+          </div>
+
+
+
           <div className="form-labgroup3">
             <label><b>Patient Name: </b></label>
             <input type="text"
@@ -206,7 +232,7 @@ export default class calCost extends Component {
 
             </select></div>
 
-
+            
           <center>
             <label><b>Total Cost: </b></label>
             <div>
@@ -224,12 +250,15 @@ export default class calCost extends Component {
               <input type="submit" value="ADD ENTRY TO DATABASE" id="btnlab3" className="btn btn-primary" onClick={this.getTotal} />
             </div>
             <br />
-            <div className="form-btn">
-              <input type="submit" value="GENARATE REPORT" id="btnlab2" className="btn btn-primary" />
+            <div >
+            <button className="viewAlllabcostBtn" id="btnlabcost"><Link className="linkTolabcostReport" to="/labcostReport">Genarate Report</Link></button>
             </div>
+            <br/>
           </center>
+          
         </form>
       </div>
+      
 
     )
   }

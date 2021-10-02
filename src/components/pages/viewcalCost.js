@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 
 const Cost = props =>(
     <tr>
+        <td>{props.cost.testdate}</td>
         <td>{props.cost.name}</td>
         <td>{props.cost.urineTest}</td>
         <td>{props.cost.Fullbloodcount}</td>
@@ -63,7 +64,9 @@ export default class viewcalCost extends Component {
                     <table className="table">
                         <thead className="thead-light">
                         <tr>
+                                <th>Date</th>
                                 <th>Name</th>
+                                
                                 <th>Urine Test</th>
                                 <th>Full Blood Count</th>
                                 <th>THS</th>
@@ -72,12 +75,14 @@ export default class viewcalCost extends Component {
                                 <th>PCR</th>
                                 <th>Antigen</th>
                                 <th>Total Cost</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             {this.costDetailsList()}
                         </tbody>
                     </table>
+                    
                 </div>
             </div>
         )

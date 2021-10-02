@@ -4,6 +4,13 @@ const Schema = mongoose.Schema;
 
 const costSchema = new Schema({
 
+    testdate: 
+    { type: Date, 
+        required: true,
+        unique: true,
+        trim: true
+    },
+
     name: {
         type: String,
         required: true,
