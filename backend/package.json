@@ -12,13 +12,13 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
     "express-middleware": "^3.4.2",
-    "express-validator": "^6.12.1",
+    "express-validator": "^6.15.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
-    "mongoose": "^5.13.7",
-    "sequelize": "^6.6.5"
+    "mongoose": "^5.13.22",
+    "sequelize": "^6.37.3"
   }
 }
